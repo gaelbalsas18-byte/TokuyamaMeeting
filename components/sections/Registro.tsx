@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { estados } from "../data/Estados";
 
 export default function Registro() {
@@ -22,7 +21,9 @@ export default function Registro() {
     instagram: "",
     privacidad: false,
     bases: false,
+
      // ===== FACTURACIÓN =====
+
     requerirFactura: false,
     rfc: "",
     cp: "",
@@ -71,6 +72,7 @@ export default function Registro() {
   };
 
   /* ================= ENVIAR FORMULARIO ================= */
+
   const enviarFormulario = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -158,7 +160,7 @@ export default function Registro() {
           {/* ====== FORMULARIO ====== */}
           {codigoValido && !enviado && (
             <form onSubmit={enviarFormulario} className="mt-10 space-y-4 text-left">
-              <p className="text-white text-sm">
+              <p className="text-black text-sm">
                 Tipo de boleto: <strong>{form.boleto}</strong>
               </p>
 
@@ -200,7 +202,7 @@ export default function Registro() {
               <input placeholder="Instagram (Opcional)" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, instagram: e.target.value })} />
 
-                <label className="flex gap-2 text-sm text-white">
+                <label className="flex gap-2 text-sm text-black">
                 <input type="checkbox" required
                   onChange={(e) => setForm({ ...form, privacidad: e.target.checked })} />
                 Acepto el{""}
@@ -211,7 +213,7 @@ export default function Registro() {
 
               {/* factura */}
               {form.boleto !== "Beca" && (
-                <label className="flex gap-2 text-sm text-white">
+                <label className="flex gap-2 text-sm text-black">
                   <input
                     type="checkbox"
                     onChange={(e) =>
@@ -222,7 +224,7 @@ export default function Registro() {
                 </label>
               )}
 
-              <p className="text-white text-sm font-semibold">
+              <p className="text-black text-sm font-semibold">
                 La factura solamente es valida si realiza el registro dentro del mes en que se realizo su primer pago
               </p>
 
@@ -315,7 +317,9 @@ export default function Registro() {
           )}
         </div>
       </div>
+
       {/* ===== FOOTER REGISTRO ===== */}
+      
                   <div className="relative z-10 mt-32 border-t border-black/30 pt-10">
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-white">
                       {/* Redes sociales */}

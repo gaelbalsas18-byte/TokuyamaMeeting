@@ -8,7 +8,6 @@ import { CONTACTOS } from "./ContactCard"
 export default function ContactosSection() {
   const [index, setIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
-
   const contactoActivo = CONTACTOS[index]
   const swipeConfidenceThreshold = 100
 
@@ -50,7 +49,8 @@ export default function ContactosSection() {
                               setIndex((prev) => (prev + 1) % CONTACTOS.length)
                             }
                           }
-  */}
+                      */}
+
   return (
     <section
       id="contacto"
@@ -79,7 +79,6 @@ export default function ContactosSection() {
 
       {/* ===== CONTENIDO ===== */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl w-full">
-
         {/* ===== STACK DE TARJETAS ===== */}
         <div className="relative h-[420px] flex items-center justify-center">
           <AnimatePresence>
@@ -111,15 +110,14 @@ export default function ContactosSection() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute bottom-0 w-full bg-blue-800 text-white p-4 text-center font-semibold">
-                    <p className="text-sm">{contact.puesto}</p>
-                  </div>
                 </motion.div>
               )
             })}
           </AnimatePresence>
         </div>
+
         {/* ===== TARJETA INFO ===== */}
+
         <motion.div
           key={contactoActivo.id}
           initial={{ opacity: 0, x: 30 }}
@@ -142,23 +140,11 @@ export default function ContactosSection() {
           <p className="text-white text-sm">
                 <span className="font-medium">{contactoActivo.descripcion}</span>
           </p>
-          <p className="mb-6 text-white">
-                <span className="font-medium">{contactoActivo.telefono}</span>
-          </p>
           
-          {/* ===== ESTADOS (CONDICIONAL) ===== */}
-          {contactoActivo.estado && (
-            <div className="bg-white rounded-lg p-4 text-center w-full">
-              <p className="text-xs uppercase tracking-wide text-black mb-1">
-                Estados asignados
-              </p>
-              <p className="text-sm font-medium text-black">
-                {contactoActivo.estado}
-              </p>
-            </div>
-          )}
         </motion.div>
+
            {/*Aviso de privacidad*/}
+
       </div>
     </section>
   )
