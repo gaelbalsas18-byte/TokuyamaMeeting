@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/Hero";
-import Ponentes from "@/components/sections/Ponentes";
 import Programa from "@/components/sections/Programa";
 import Ubicacion from "@/components/sections/Ubicacion";
 import Registro from "@/components/sections/Registro";

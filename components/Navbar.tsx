@@ -38,14 +38,14 @@ export default function Navbar() {
         className="absolute inset-0 opacity-95"
         style={{
           background:
-            "linear-gradient(270deg, #0f172a, #0cab63, #0fc573, #b6fadb)",
+            "linear-gradient(270deg, #ad2ae6, #b710ff, #f89b30eb, #f89b30eb, #f2ecf5)",
           backgroundSize: "600% 600%",
         }}
         animate={{
           backgroundPosition: ["10% 50%", "100% 50%", "0% 50%"],
         }}
         transition={{
-          duration: 30,
+          duration: 20,
           ease: "linear",
           repeat: Infinity,
         }}
@@ -55,21 +55,21 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
 
         {/* LOGOS (MISMA ESTRUCTURA) */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:translate-x-25 md:translate-y-[3px]">
             <Image
-              src="/Logos/BalsasTrans.png"
-              alt="Balsas Dental"
-              width={60}
-              height={45}
+              src="/Logos/Tokuyamat.png"
+              alt="Tokuyama"
+              width={180}
+              height={120}
               priority
             />
 
-            <div className="translate-y-[10px]">
+            <div className="translate-y-[1px] md:translate-x-160">
               <Image
-                src="/Logos/Tokuyamat.png"
-                alt="Tokuyama Fest"
-                width={140}
-                height={90}
+                src="/Logos/BalsasTrans.png"
+                alt="Logo Balsas"
+                width={90}
+                height={45}
                 priority
               />
             </div>

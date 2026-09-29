@@ -21,10 +21,10 @@ export default function Ubicacion() {
         >
 
           <h2 className="text-4xl md:text-4xl font-bold text-[#0f172a]">
-            Ubicación<span className="text-[#0cab63]">.</span>
+            Ubicación<span className="text-[#9333c2]">.</span>
           </h2>
 
-          <div className="w-16 h-1 bg-[#0cab63] mx-auto mt-6 rounded-full" />
+          <div className="w-16 h-1 bg-[#9333c2] mx-auto mt-6 rounded-full" />
         </motion.div>
 
            <h3 className="text-sm uppercase tracking-widest text-neutral-400 font-semibold text-center mt-6">
@@ -65,18 +65,18 @@ export default function Ubicacion() {
 
             <div className="bg-white border border-gray-100 rounded-2xl px-7 py-4 shadow-sm">
               <p className="text-xs uppercase tracking-wider text-gray-400">
-                Universidad
+                Centro de exposiciones 
               </p>
 
               <p className="font-semibold text-[#0f172a] mt-1">
-                Chihuahua
+                Tecnológico 1900
               </p>
             </div>
 
 
             <div className="bg-white border border-gray-100 rounded-2xl px-7 py-4 shadow-sm">
               <p className="text-xs uppercase tracking-wider text-gray-400">
-                Ciudad
+                Estado
               </p>
 
               <p className="font-semibold text-[#0f172a] mt-1">
@@ -91,7 +91,7 @@ export default function Ubicacion() {
               BOTÓN
           ========================== */}
           <motion.a
-            href="https://www.google.com/maps?sca_esv=0b64f9733fed06e0&rlz=1C5CHFA_enMX1169MX1169&output=search&q=centro+libanes+hermes&source=lnms"
+            href="https://www.google.com/maps/place/Expo+Chihuahua,+Centro+De+Exposiciones+Y+Convenciones./@28.6545867,-106.0772743,17z/data=!3m1!4b1!4m6!3m5!1s0x86ea43682027e9c9:0x6eb4083331ab7a9c!8m2!3d28.6545867!4d-106.0746994!16s%2Fg%2F1tdzgfvc?entry=ttu&g_ep=EgoyMDI2MDkyNy4xIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -3 }}
@@ -105,14 +105,14 @@ export default function Ubicacion() {
               px-8
               py-4
               rounded-xl
-              bg-[#0cab63]
+              bg-[#9333c2]
               text-white
               font-semibold
               uppercase
               tracking-wide
               shadow-lg
               shadow-[#0cab63]/20
-              hover:bg-[#0f172a]
+              hover:bg-[#eea23f]
               transition-all
               duration-300
             "
@@ -151,10 +151,11 @@ export default function Ubicacion() {
             <div className="relative overflow-hidden rounded-[1.5rem]">
 
               <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-99.18148308992387%2C19.362712961598092%2C-99.17968064546587%2C19.36417811427046&amp;layer=mapnik"
+                src="https://www.openstreetmap.org/export/embed?bbox=-106.0819673538208%2C28.651220931416827%2C-106.07475757598878%2C28.65743473993791&amp;layer=mapnik"
                 className="w-full h-[350px] md:h-[450px]"
                 loading="lazy"
               />
+
 
               {/* ETIQUETA SOBRE EL MAPA */}
               <div
@@ -183,7 +184,7 @@ export default function Ubicacion() {
                   </p>
 
                   <p className="text-sm font-bold text-[#0f172a]">
-                    Centro Libanés
+                    EXPO Chihuahua
                   </p>
                 </div>
               </div>

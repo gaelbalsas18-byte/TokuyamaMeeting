@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { estados } from "../data/Estados";
+import Image from "next/image";
 
 export default function Registro() {
   const [codigoValido, setCodigoValido] = useState(false);
@@ -50,6 +51,7 @@ export default function Registro() {
           }),
         }
       );
+
       const data = await res.json();
 
       if (!data.success) {
@@ -106,13 +108,25 @@ export default function Registro() {
   };
 
   return (
-    <section id="registro" className="relative py-32 px-6 overflow-hidden bg-white">
+   <section id="registro" className="relative py-32 px-6 overflow-hidden">
+
       {/* Background */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/TIM Chihuahua/TIM Chihuahua pie.jpg"
+            alt=""
+            fill
+            className="object-cover"
+          />
+
+          {/*<div className="absolute inset-0 bg-white/75" /> */}
+        </div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
         {/* COLUMNA IZQUIERDA */}
-        <div className="text-black">
+
+        <div className="text-white">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,14 +148,16 @@ export default function Registro() {
         </div>
 
         {/* COLUMNA DERECHA */}
+
         <div className="max-w-xl mx-auto w-full text-center">
 
           {/* ====== CÓDIGO ====== */}
+
           {!codigoValido && (
             <div className="space-y-4">
               <input
                 placeholder="Código de acceso"
-                className="w-full border border-[#0cab63] px-4 py-3 rounded-lg bg-white text-black text-center"
+                className="w-full border border-white px-4 py-3 rounded-lg bg-white text-purple-700 text-center"
                 onChange={(e) =>
                   setForm({ ...form, codigo: e.target.value.trim().toUpperCase() })
                 }
@@ -150,7 +166,7 @@ export default function Registro() {
               <button
                 onClick={validarCodigo}
                 disabled={loading}
-                className="w-full border border-[#0cab63] text-black py-3 rounded-lg uppercase tracking-wide hover:bg-white hover:text-black transition-all"
+                className="w-full border border-white text-white py-3 rounded-lg uppercase tracking-wide hover:bg-white hover:text-purple-700 transition-all"
               >
                 {loading ? "Validando..." : "Validar código"}
               </button>
@@ -158,6 +174,7 @@ export default function Registro() {
           )}
 
           {/* ====== FORMULARIO ====== */}
+
           {codigoValido && !enviado && (
             <form onSubmit={enviarFormulario} className="mt-10 space-y-4 text-left">
               <p className="text-black text-sm">
@@ -206,12 +223,14 @@ export default function Registro() {
                 <input type="checkbox" required
                   onChange={(e) => setForm({ ...form, privacidad: e.target.checked })} />
                 Acepto el{""}
+                
                 <a href="https://balsasdental.com.mx/wp-content/uploads/2025/12/AV-PRIVACIDAD-USO-DE-IMAGEN-Y-C-ATOTIZACION-CLIENTES.pdf" className="underline hover:text-green-400">
                   Aviso de privacidad
                 </a>
               </label>
 
               {/* factura */}
+
               {form.boleto !== "Beca" && (
                 <label className="flex gap-2 text-sm text-black">
                   <input
@@ -293,7 +312,7 @@ export default function Registro() {
                   )}
 
               {(form.boleto === "Hands On" || form.boleto === "Beca") && (
-                <label className="flex gap-2 text-sm text-white">
+                <label className="flex gap-2 text-sm text-black">
                   <input type="checkbox" required
                     onChange={(e) => setForm({ ...form, bases: e.target.checked })} />
                   Acepto las{" "}
@@ -311,7 +330,7 @@ export default function Registro() {
             </form>
           )}
           {enviado && (
-            <div className="mt-10 text-green-400 text-xl font-semibold">
+            <div className="mt-10 text-white text-xl font-semibold">
               ✅ Registro completado correctamente
             </div>
           )}
@@ -320,15 +339,17 @@ export default function Registro() {
 
       {/* ===== FOOTER REGISTRO ===== */}
       
-                  <div className="relative z-10 mt-32 border-t border-black/30 pt-10">
+                  <div className="relative z-10 mt-32 border-t border-white pt-10">
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-white">
+
                       {/* Redes sociales */}
+
                       <div className="flex gap-6">
                         <a
                           href="https://www.facebook.com/BalsasDentalmx"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opacity-70 transition text-[#0cab63]"
+                          className="hover:opacity-70 transition text-white"
                           aria-label="Facebook"
                         >
                           <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -339,7 +360,7 @@ export default function Registro() {
                           href="https://www.instagram.com/balsasdentalmx/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:opacity-70 transition text-[#0cab63]"
+                          className="hover:opacity-70 transition text-white"
                           aria-label="Instagram"
                         >
                           <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -347,8 +368,10 @@ export default function Registro() {
                           </svg>
                         </a>
                       </div>
+
                       {/* Derechos */}
-                      <p className="text-sm opacity-80 text-center md:text-right text-black">
+
+                      <p className="text-sm opacity-80 text-center md:text-right text-white">
                         © {new Date().getFullYear()} Tokuyama International Meeting.  
                         Todos los derechos reservados.
                       </p>

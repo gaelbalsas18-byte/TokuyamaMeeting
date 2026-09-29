@@ -6,52 +6,34 @@ import Image from "next/image";
 
 const programa = [
   {
-    dia: "Día 1 - Tokuyama-Fest",
-    fecha: "Lunes 08 Junio 2026",
+    dia: "Día 1 - Tokuyama-Meeting",
+    fecha: "04 Febrero 2027",
     imagen: "/Programa/Dia1.jpg",
     actividades: [
-      { hora: "07:00 - 09:00", titulo: "Registro" },
-      { hora: "09:00 - 09:30", titulo: "Inauguración" },
-      { hora: "09:30 - 10:30", titulo: "Conferencia - Dr. Yoshitaka Nijitomi - Omnichroma, la solución versátil para múltiples casos"},
-      { hora: "10:30 - 11:30", titulo: "Conferencia - Dr. Hugo Cornejo - El rol de los adhesivos universales en la práctica odontológica actual" },
-      { hora: "11:30 - 12:20", titulo: "Coffee - Break" },
-      { hora: "12:20 - 14:20", titulo: "Conferencia - Prof. Newton Fahl - El Arte y la Ciencia de las Obras Maestras en Composite Anterior" },
-      { hora: "14:20 - 15:00", titulo: "Coffee - Break" },
-      { hora: "15:00 - 16:00", titulo: "Dr. Noboru Takahashi - “Optimización de restauraciones posteriores (estética y función en equilibrio)" },
-      { hora: "16:00 - 17:00", titulo: "Conferencia - Clínica Supreme - Cementación de Carillas de Porcelana con Protocolo de Cementación" },
-      { hora: "17:00 - 18:00", titulo: "Conferencia - Dr. Mauricio Madera - La versatilidad de la resina compuesta en el sector anterior"}
+      { hora: "08:00 - 09:00", titulo: "Registro" },
+      { hora: "09:00 - 10:00", titulo: "Conferencia - Dr. Yoshitaka Nijitomi" },
+      { hora: "10:00 - 11:00", titulo: "Conferencia - Dr. Andres Curra"},
+      { hora: "11:00 - 11:30", titulo: "Coffee - Break" },
+      { hora: "11:30 - 12:30", titulo: "Conferencia - Dra. Montserrat Zendejas" },
+      { hora: "12:30 - 13:00", titulo: "Coffee - Break" },
+      { hora: "13:00 - 14:00", titulo: "Conferencia - Dr. Johan Figueira"},
+      { hora: "14:00 - 16:00", titulo: "Comida" },
+      { hora: "16:00 - 17:30", titulo: "Conferencia - Dr. Thiago Ottoboni" },
     ],
   },
 
    {
-    dia: "Día 2 - Tokuyama-Fest",
-    fecha: "Martes 09 Junio 2026",
+    dia: "Día 2 - Tokuyama-Meeting",
+    fecha: "05 Febrero 2027",
     imagen: "/Programa/Dia2.jpg",
     actividades: [
       { hora: "08:00 - 09:00", titulo: "Registro" },
-      { hora: "09:00 - 11:00", titulo: "Hands On - Prof. Newton Fahl “Combinando PCL y NLC para Restauraciones Estéticas Anteriores en Resinas Compuestas" },
+      { hora: "09:00 - 11:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
       { hora: "11:00 - 11:30", titulo: "Coffee - Break" },
-      { hora: "11:30 - 14:00", titulo: "Hands On - Prof. Newton Fahl “Combinando PCL y NLC para Restauraciones Estéticas Anteriores en Resinas Compuestas" },
-      { hora: "14:00 - 15:30", titulo: "Comida" },
-      { hora: "15:30 - 17:00", titulo: "Hands On - Prof. Newton Fahl “Combinando PCL y NLC para Restauraciones Estéticas Anteriores en Resinas Compuestas" },
-      { hora: "17:00 - 17:30", titulo: "Coffee - Break" },
-      { hora: "17:30 - 18:30", titulo: "Deliberación" },
-      { hora: "18:30 - 19:00", titulo: "Clausura" },
-      { hora: "19:00 - 19:30", titulo: "Salida" },
-    ],
-  },
-
-  {
-    dia: "Día 3 - Tokuyama-Fest",
-    fecha: "Miercoles 10 Junio 2026",
-    imagen: "/Programa/Dia3.jpg", 
-    actividades: [
-      { hora: "09:30 - 10:00", titulo: "Recepción" },
-      { hora: "10:00 - 13:00", titulo: "Concurso" },
-      { hora: "13:00 - 13:30", titulo: "Coffee - Break" },
-      { hora: "13:30 - 15:00", titulo: "Concurso" },
-      { hora: "15:00 - 16:00", titulo: "Deliberación" },
-      { hora: "16:00 - 20:00", titulo: "Coctel" },
+      { hora: "11:30 - 13:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
+      { hora: "13:00 - 15:00", titulo: "Comida" },
+      { hora: "15:00 - 18:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
+      { hora: "18:00 - 18:30", titulo: "Clausura" },
     ],
   },
 ];
@@ -74,11 +56,10 @@ export default function Programa() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-black text-center"
         >
-          Programa<span className="text-[#0cab63]">.</span>
+          Programa<span className="text-[#9333c2]">.</span>
 
-          <div className="w-16 h-1 bg-[#0cab63] mx-auto mt-6 rounded-full" />
-
-          
+          <div className="w-16 h-1 bg-[#9333c2] mx-auto mt-6 rounded-full" />
+  
         </motion.h2>
 
         <h3 className="text-sm uppercase tracking-widest text-neutral-400 font-semibold text-center mt-6">
@@ -109,8 +90,8 @@ export default function Programa() {
                     key={index}
                     layout
                     className={`rounded-3xl overflow-hidden border transition-all duration-300
-                    ${isOpen ? "border-white bg-white/8" : "border-[#0cab63] bg-transparent"}
-                    hover:border-[#0cab63] hover:bg-white/5
+                    ${isOpen ? "border-white bg-white/8" : "border-[#9333c2] bg-transparent"}
+                    hover:border-[#9333c2] hover:bg-white/5
                   `}
                   >
                     <button
@@ -128,7 +109,7 @@ export default function Programa() {
                       <motion.span
                         animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
-                        className="text-[#0cab63] text-xl"
+                        className="text-[#f89b30eb] text-xl"
                       >
                         ▼
                       </motion.span>
@@ -166,7 +147,7 @@ export default function Programa() {
                               href="/MaterialT.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="px-6 py-2 border border-[#0cab63] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
+                              className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
                             >
                               Materiales
                             </a>
@@ -174,7 +155,7 @@ export default function Programa() {
                               href="/BasesT.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="px-6 py-2 border border-[#0cab63] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
+                              className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
                             >
                               Bases
                             </a>

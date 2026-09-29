@@ -1,28 +1,112 @@
-
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
+  const [parrafoActivo, setParrafoActivo] = useState(0);
+
+  const parrafos = [
+    `Tokuyama International Meeting es un encuentro odontológico
+    concebido como un puente entre México y el conocimiento global.
+    Un espacio donde ponentes internacionales de alto nivel
+    comparten su experiencia clínica, técnicas avanzadas y visión
+    profesional con la comunidad odontológica, fomentando el
+    intercambio de ideas y aprendizajes que trascienden la práctica
+    clínica.`,
+
+    `Más que un evento, Tokuyama International Meeting es una
+    plataforma para conectar con líderes internacionales, fortalecer
+    relaciones profesionales y abrir oportunidades reales de
+    crecimiento y colaboración más allá de nuestras fronteras.`,
+
+    `Un punto de encuentro que impulsa una comunidad global guiada
+    por la excelencia, la innovación y la evolución constante de la
+    odontología.`,
+  ];
+
+  {/* =========================
+      CAMBIO AUTOMÁTICO
+  ========================== */}
+
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setParrafoActivo((prev) => (prev + 1) % parrafos.length);
+    }, 8000);
+
+    return () => clearInterval(intervalo);
+  }, [parrafos.length]);
+
+
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden py-20"
-      style={{
-        background:
-          "linear-gradient(270deg, #0f172a, #0cab63, #0fc573, #b6fadb)",
-      }}
+      className="
+        relative
+        min-h-screen
+        flex
+        items-center
+        overflow-hidden
+        py-20
+        md:py-20
+      "
     >
-      {/* CONTENIDO PRINCIPAL */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 w-full">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      {/* =========================
+          IMAGEN DE FONDO
+      ========================== */}
+
+      <div className="absolute inset-0">
+
+        <Image
+          src="/TIM Chihuahua/TIM Chihuahua principal.jpg"
+          alt=""
+          fill
+          priority
+          className="
+            object-cover
+            object-center
+          "
+        />
+      </div>
+
+
+      {/* =========================
+          CONTENIDO PRINCIPAL
+      ========================== */}
+
+      <div
+        className="
+          relative
+          z-10
+          max-w-7xl
+          mx-auto
+          px-5
+          sm:px-8
+          w-full
+        "
+      >
+
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-8
+            md:gap-16
+            items-center
+          "
+        >
 
           {/* =========================
-              COLUMNA IZQUIERDA - LOGO
+              ELEMENTO SUPERIOR
           ========================== */}
+
           <motion.div
-            initial={{ opacity: 0, x: -80, scale: 1.1 }}
+            initial={{
+              opacity: 0,
+              x: -80,
+              scale: 1.1,
+            }}
             animate={{
               opacity: 1,
               x: 0,
@@ -30,9 +114,18 @@ export default function Hero() {
               y: [0, -15, 0],
             }}
             transition={{
-              opacity: { duration: 1 },
-              x: { duration: 1 },
-              scale: { duration: 1.5 },
+              opacity: {
+                duration: 1,
+              },
+
+              x: {
+                duration: 1,
+              },
+
+              scale: {
+                duration: 1.5,
+              },
+
               y: {
                 duration: 6,
                 repeat: Infinity,
@@ -48,84 +141,180 @@ export default function Hero() {
               max-w-[650px]
             "
           >
-            <Image
-              src="/Logos/Meeting.png"
-              alt="Tokuyama Fest"
-              width={1600}
-              height={1000}
-              priority
-              className="w-full h-auto"
-            />
           </motion.div>
 
 
           {/* =========================
-              COLUMNA DERECHA - TEXTO
+              CONTENEDOR DEL CARRUSEL
           ========================== */}
-          <div className="text-white text-center md:text-left">
 
-            <motion.h2
-              initial={{ opacity: 0, x: 80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.3,
-              }}
+          <div
+            className="
+              relative
+              text-white
+              text-center
+
+              max-w-3xl
+              mx-auto
+              w-full
+
+              mt-40
+              sm:mt-32
+              md:mt-50
+
+              pb-8
+              md:pb-0
+            "
+          >
+
+            {/* =========================
+                ÁREA DEL TEXTO
+            ========================== */}
+
+            <div
               className="
-                text-base
-                sm:text-lg
-                leading-relaxed
+                relative
+
+                h-[250px]
+                sm:h-[220px]
+                md:h-[170px]
+
+                flex
+                items-center
+                justify-center
               "
             >
-              Tokuyama Internatioanl Meeting es un encuentro odontológico
-              concebido como un puente entre México y el conocimiento global.
-              Un espacio donde ponentes internacionales de alto nivel
-              comparten su experiencia clínica, técnicas avanzadas y visión
-              profesional con la comunidad odontológica, fomentando el
-              intercambio de ideas y aprendizajes que trascienden la práctica
-              clínica.
 
-              <br /><br />
+              <AnimatePresence mode="wait">
 
-              Más que un evento, Tokuyama Internatioanl Meeting es una
-              plataforma para conectar con líderes internacionales, fortalecer
-              relaciones profesionales y abrir oportunidades reales de
-              crecimiento y colaboración más allá de nuestras fronteras.
+                <motion.p
+                  key={parrafoActivo}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: -20,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                    ease: "easeInOut",
+                  }}
+                  className="
+                    absolute
+                    inset-x-0
 
-              <br /><br />
+                    text-[13px]
+                    sm:text-[14px]
+                    md:text-lg
 
-              Un punto de encuentro que impulsa una comunidad global guiada
-              por la excelencia, la innovación y la evolución constante de la
-              odontología.
-            </motion.h2>
+                    leading-6
+                    sm:leading-6
+                    md:leading-relaxed
+
+                    drop-shadow-lg
+
+                    px-2
+                    sm:px-4
+                    md:px-0
+                  "
+                >
+                  {parrafos[parrafoActivo]}
+                </motion.p>
+
+              </AnimatePresence>
+
+            </div>
+
+
+            {/* =========================
+                INDICADORES
+            ========================== */}
+
+            <div
+              className="
+                flex
+                justify-center
+                items-center
+                gap-2
+                mt-2
+              "
+            >
+
+              {parrafos.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setParrafoActivo(index)}
+                  aria-label={`Mostrar información ${index + 1}`}
+                  className={`
+                    h-2
+                    rounded-full
+                    transition-all
+                    duration-500
+
+                    ${
+                      index === parrafoActivo
+                        ? "w-7 bg-white"
+                        : "w-2 bg-white/50"
+                    }
+                  `}
+                />
+              ))}
+
+            </div>
 
 
             {/* =========================
                 BOTÓN
             ========================== */}
+
             <motion.a
               href="https://wa.me/525568022536?text=Hola%20quiero%20información%20sobre%20las%20entradas%20al%20Tokuyama%20Fest"
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
                 delay: 0.9,
                 duration: 0.8,
               }}
               className="
                 inline-block
-                mt-8
-                px-8
-                py-4
+
+                mt-6
+                sm:mt-7
+                md:mt-8
+
+                px-6
+                sm:px-8
+
+                py-3
+                sm:py-4
+
                 border
                 border-white
+
                 tracking-wide
                 uppercase
-                text-base
-                sm:text-lg
+
+                text-xs
+                sm:text-sm
+                md:text-lg
+
                 hover:bg-white
                 hover:text-black
+
                 transition-all
                 duration-300
               "
@@ -136,7 +325,9 @@ export default function Hero() {
           </div>
 
         </div>
+
       </div>
+
     </section>
   );
 }
