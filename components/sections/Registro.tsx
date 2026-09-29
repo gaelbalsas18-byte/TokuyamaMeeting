@@ -113,7 +113,7 @@ export default function Registro() {
       {/* Background */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/TIM Chihuahua/TIM Chihuahua pie.jpg"
+            src="/TIM Chihuahua/Pie.jpg"
             alt=""
             fill
             className="object-cover"

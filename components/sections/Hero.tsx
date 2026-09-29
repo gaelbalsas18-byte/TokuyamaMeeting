@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="absolute inset-0">
 
         <Image
-          src="/TIM Chihuahua/TIM Chihuahua principal.jpg"
+          src="/TIM Chihuahua/TIM.jpg"
           alt=""
           fill
           priority

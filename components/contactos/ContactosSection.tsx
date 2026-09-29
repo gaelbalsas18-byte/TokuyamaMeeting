@@ -193,8 +193,8 @@ export default function ContactosSection() {
           md:w-[400px]
           lg:w-[430px]
 
-          md:h-[250px]
-          md:min-h-0
+          md:min-h-[250px]
+          md:h-auto
 
           md:border-white/80
           md:bg-transparent
