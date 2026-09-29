@@ -208,7 +208,7 @@ export default function ContactosSection() {
         {/* ===== LOGO ===== */}
 
         <Image
-          src="/logos/BalsasTrans.png"
+          src="/logos/Blanco.png"
           alt="Balsas Dental"
           width={100}
           height={22}
