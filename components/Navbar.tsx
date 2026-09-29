@@ -66,7 +66,7 @@ export default function Navbar() {
 
             <div className="translate-y-[1px] md:translate-x-160">
               <Image
-                src="/Logos/BalsasTrans.png"
+                src="/Logos/Blanco.png"
                 alt="Logo Balsas"
                 width={90}
                 height={45}
