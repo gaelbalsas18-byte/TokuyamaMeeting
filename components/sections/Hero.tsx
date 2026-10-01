@@ -274,7 +274,7 @@ export default function Hero() {
             ========================== */}
 
             <motion.a
-              href="https://wa.me/525568022536?text=Hola%20quiero%20información%20sobre%20las%20entradas%20al%20Tokuyama%20Fest"
+              href="https://wa.me/525564143107?text=Hola%20quiero%20información%20sobre%20las%20entradas%20al%20Tokuyama%20International Meeting"
               target="_blank"
               rel="noopener noreferrer"
               initial={{
@@ -331,3 +331,5 @@ export default function Hero() {
     </section>
   );
 }
+
+

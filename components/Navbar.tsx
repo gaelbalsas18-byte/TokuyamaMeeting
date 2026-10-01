@@ -75,7 +75,6 @@ export default function Navbar() {
             </div>
           </div>
 
-
         {/* MENU DESKTOP (IGUAL) */}
         <div className="hidden md:flex gap-16 text-white absolute left-1/2 -translate-x-1/2">
           <a href="#ponentes" className="font-semibold hover:opacity-80">PONENTES</a>

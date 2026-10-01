@@ -147,7 +147,6 @@ export default function ContactosSection() {
         <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-black/10 via-transparent to-black/20" />
       </div>
 
-
       {/* ================================================= */}
       {/* ===== TARJETA DE INFORMACIÓN ==================== */}
       {/* ================================================= */}
@@ -190,8 +189,8 @@ export default function ContactosSection() {
           md:top-1/2
           md:-translate-y-1/2
 
-          md:w-[400px]
-          lg:w-[430px]
+          md:w-[700px]
+          lg:w-[530px]
 
           md:min-h-[250px]
           md:h-auto
@@ -205,26 +204,24 @@ export default function ContactosSection() {
         "
       >
 
-        {/* ===== LOGO ===== */}
-
-        <Image
-          src="/Logos/Blanco.png"
-          alt="Balsas Dental"
-          width={100}
-          height={22}
-          className="object-contain mb-4"
-        />
-
-
         {/* ===== NOMBRE ===== */}
 
         <h3 className="text-2xl md:text-2xl font-semibold text-center mb-2">
           {contactoActivo.nombre}
         </h3>
 
+        {/* ===== BANDERA ===== */}
+        <div className="flex justify-center items-center mb-3">
+          <Image
+            src={contactoActivo.bandera}
+            alt={`Bandera de ${contactoActivo.puesto}`}
+            width={28}
+            height={23}
+            className="w-7 h-[18px] object-cover rounded-sm shadow-sm"
+          />
+        </div>
 
         {/* ===== PUESTO ===== */}
-
         <p
           className="
             text-sm
@@ -274,7 +271,7 @@ export default function ContactosSection() {
             onClick={() => setIndex(i)}
             className={`h-2 rounded-full transition-all duration-300 ${
               i === index
-                ? "w-8 bg-[#0cab63]"
+                ? "w-8 bg-[#9333c2]"
                 : "w-2 bg-neutral-300"
             }`}
             aria-label={`Ver a ${contacto.nombre}`}
