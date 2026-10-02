@@ -6,7 +6,6 @@ import Image from "next/image";
 
 export default function Hero() {
   const [parrafoActivo, setParrafoActivo] = useState(0);
-
   const parrafos = [
     `Tokuyama International Meeting es un encuentro odontológico
     concebido como un puente entre México y el conocimiento global.
@@ -38,7 +37,6 @@ export default function Hero() {
     return () => clearInterval(intervalo);
   }, [parrafos.length]);
 
-
   return (
     <section
       className="
@@ -69,7 +67,6 @@ export default function Hero() {
           "
         />
       </div>
-
 
       {/* =========================
           CONTENIDO PRINCIPAL
@@ -142,7 +139,6 @@ export default function Hero() {
             "
           >
           </motion.div>
-
 
           {/* =========================
               CONTENEDOR DEL CARRUSEL
@@ -331,5 +327,3 @@ export default function Hero() {
     </section>
   );
 }
-
-
