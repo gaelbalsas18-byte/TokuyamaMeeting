@@ -80,95 +80,124 @@ export default function Programa() {
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
           
           {/* LISTA PROGRAMA */}
-          <div className="lg:max-w-lg">
-            <div className="space-y-8">
-              {programa.map((dia, index) => {
-                const isOpen = activo === index;
-              
-                return (
-                  <motion.div
-                    key={index}
-                    layout
-                    className={`rounded-3xl overflow-hidden border transition-all duration-300
-                    ${isOpen ? "border-white bg-white/8" : "border-[#9333c2] bg-transparent"}
-                    hover:border-[#9333c2] hover:bg-white/5
-                  `}
-                  >
-                    <button
-                      onClick={() => setActivo(activo === index ? null : index)}
-                      className="w-full flex justify-between items-center px-4 py-5 text-left"
-                    >
-                      <div>
-                        <h3 className="text-2xl font-semibold text-black">
-                          {dia.dia}
-                        </h3>
-                        <p className="text-1xl text-black/100">
-                          {dia.fecha}
-                        </p>
-                      </div>
-                      <motion.span
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-[#f89b30eb] text-xl"
-                      >
-                        ▼
-                      </motion.span>
-                    </button>
-                    <AnimatePresence>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.4 }}
-                          className="px-6 pb-6"
-                        >
-                          <ul className="space-y-3">
-                            {dia.actividades.map((act, i) => (
-                              <li
-                                key={i}
-                                  className="grid grid-cols-[110px_1fr] md:grid-cols-[130px_1fr] gap-4 text-black/90"
-                                >
-                                  <span className="font-mono text-black text-sm md:text-base text-right tracking-wide">
-                                    {act.hora}
-                                  </span>
 
-                                  <span className="text-sm md:text-lg leading-relaxed">
-                                    {act.titulo}
-                                  </span>
-                                </li>
-                            ))}
-                          </ul>
-                          {/* BOTONES SOLO DÍA 2 Y 3 */}
-                        {index > 0 && (
-                          <div className="mt-6 flex gap-4">
-                            
-                            <a
-                              href="#"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
-                            >
-                              Materiales
-                            </a>
-                            <a
-                              href="#"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
-                            >
-                              Bases
-                            </a>
+              <div className="lg:max-w-lg">
+                <div className="space-y-8">
+                  {programa.map((dia, index) => {
+                    const isOpen = activo === index;
+
+                    return (
+                      <motion.div
+                        key={index}
+                        layout
+                        className={`relative rounded-3xl overflow-hidden border transition-all duration-300
+                          ${
+                            isOpen
+                              ? "border-white"
+                              : "border-[#9333c2] bg-transparent"
+                          }
+                          hover:border-[#9333c2]
+                        `}
+                        animate={{
+                          backgroundPosition: isOpen ? ["0% 30%", "90% 60%", "0% 50%"] : "0% 50%",
+                        }}
+                        transition={{
+                          backgroundPosition: {
+                            duration: 6,
+                            repeat: isOpen ? Infinity : 0,
+                            ease: "linear",
+                          },
+                        }}
+                        style={
+                          isOpen
+                            ? {
+                                backgroundImage:
+                                  "linear-gradient(120deg,  #f89b30, #ffffff, #e8d5b5, #ffffff, #d35cee6b, #f89b30ab, #ffffff, #e8d5b5)",
+                                backgroundSize: "300% 300%",
+                              }
+                            : undefined
+                        }
+                      >
+                        <button
+                          onClick={() => setActivo(activo === index ? null : index)}
+                          className="w-full flex justify-between items-center px-4 py-5 text-left"
+                        >
+                          <div>
+                            <h3 className="text-2xl font-semibold text-black">
+                              {dia.dia}
+                            </h3>
+
+                            <p className="text-1xl text-black/100">
+                              {dia.fecha}
+                            </p>
                           </div>
-                        )}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>         
+
+                          <motion.span
+                            animate={{ rotate: isOpen ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="text-[#f89b30eb] text-xl"
+                          >
+                            ▼
+                          </motion.span>
+                        </button>
+
+                        <AnimatePresence>
+                          {isOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.4 }}
+                              className="px-6 pb-6"
+                            >
+                              <ul className="space-y-3">
+                                {dia.actividades.map((act, i) => (
+                                  <li
+                                    key={i}
+                                    className="grid grid-cols-[110px_1fr] md:grid-cols-[130px_1fr] gap-4 text-black/90"
+                                  >
+                                    <span className="font-mono text-black text-sm md:text-base text-right tracking-wide">
+                                      {act.hora}
+                                    </span>
+
+                                    <span className="text-sm md:text-lg leading-relaxed">
+                                      {act.titulo}
+                                    </span>
+                                  </li>
+                                ))}
+                              </ul>
+
+                              {/* BOTONES SOLO DÍA 2 Y 3 */}
+                              {index > 0 && (
+                                <div className="mt-6 flex gap-4">
+                                  <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
+                                  >
+                                    Materiales
+                                  </a>
+
+                                  <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
+                                  >
+                                    Bases
+                                  </a>
+                                </div>
+                              )}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+
           {/* PANEL DE IMAGENES */}
          <div
               className="

@@ -176,33 +176,33 @@ export default function Registro() {
           {/* ====== FORMULARIO ====== */}
 
           {codigoValido && !enviado && (
-            <form onSubmit={enviarFormulario} className="mt-10 space-y-4 text-left">
-              <p className="text-black text-sm">
+            <form onSubmit={enviarFormulario} className="mt-1 space-y-4 text-left">
+              <p className="text-white text-lg">
                 Tipo de boleto: <strong>{form.boleto}</strong>
               </p>
 
-              <input required placeholder="Nombre Completo" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input required placeholder="Nombre Completo" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, nombreCompleto: e.target.value })} />
 
-              <input required type="email" placeholder="Correo" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input required type="email" placeholder="Correo" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, email: e.target.value })} />
 
-              <input required placeholder="Teléfono" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input required placeholder="Teléfono" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, telefono: e.target.value })} />
 
-              <input placeholder="Cédula Profesional (Opcional)" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input placeholder="Cédula Profesional (Opcional)" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, cedula: e.target.value })} />
 
-              <input placeholder="Especialidad" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input placeholder="Especialidad" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, especialidad: e.target.value })} />
 
-              <input required placeholder="¿Alguna alergia?" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input required placeholder="¿Alguna alergia?" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, alergias: e.target.value })} />
 
               <select
                     required
                     defaultValue=""
-                    className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+                    className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                     onChange={(e) => setForm({ ...form, estado: e.target.value })}
                   >
                     <option value="" disabled>
@@ -216,15 +216,15 @@ export default function Registro() {
                     ))}
                   </select>
 
-              <input placeholder="Instagram (Opcional)" className="w-full border px-4 py-3 rounded-lg bg-white text-black"
+              <input placeholder="Instagram (Opcional)" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, instagram: e.target.value })} />
 
-                <label className="flex gap-2 text-sm text-black">
+                <label className="flex gap-2 text-sm text-white">
                 <input type="checkbox" required
                   onChange={(e) => setForm({ ...form, privacidad: e.target.checked })} />
                 Acepto el{""}
                 
-                <a href="https://balsasdental.com.mx/wp-content/uploads/2025/12/AV-PRIVACIDAD-USO-DE-IMAGEN-Y-C-ATOTIZACION-CLIENTES.pdf" className="underline hover:text-green-400">
+                <a href="https://balsasdental.com.mx/wp-content/uploads/2025/12/AV-PRIVACIDAD-USO-DE-IMAGEN-Y-C-ATOTIZACION-CLIENTES.pdf" className="underline hover:text-purple-700">
                   Aviso de privacidad
                 </a>
               </label>
@@ -232,7 +232,7 @@ export default function Registro() {
               {/* factura */}
 
               {form.boleto !== "Beca" && (
-                <label className="flex gap-2 text-sm text-black">
+                <label className="flex gap-2 text-sm text-white">
                   <input
                     type="checkbox"
                     onChange={(e) =>
@@ -243,7 +243,7 @@ export default function Registro() {
                 </label>
               )}
 
-              <p className="text-black text-sm font-semibold">
+              <p className="text-white text-sm font-semibold">
                 La factura solamente es valida si realiza el registro dentro del mes en que se realizo su primer pago
               </p>
 
@@ -330,8 +330,10 @@ export default function Registro() {
             </form>
           )}
           {enviado && (
-            <div className="mt-10 text-white text-xl font-semibold">
-              ✅ Registro completado correctamente
+            <div className="mt-10 text-white text-lg">
+              ✅ Registro completado correctamente. <br />
+              Se le hizo llegar un <strong className="text-purple-600">Qr a su correo</strong> para su acceso el dia del evento. <br />
+              Disfruta de la Experiencia Tokuyama International Meeting
             </div>
           )}
         </div>
