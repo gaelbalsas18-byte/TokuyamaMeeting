@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "TOKUYAMA INTERNATIONAL MEETING",
   description: "Pagina de eventos tokuyama x Balsas Dental",
   icons: {
-    icon: "/Favicon.png"
+    icon: "Logos/Icon.png"
   },
 };
 
