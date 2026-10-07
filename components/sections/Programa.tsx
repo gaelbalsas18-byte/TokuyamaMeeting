@@ -22,7 +22,7 @@ const programa = [
     ],
   },
 
-   {
+  {
     dia: "Día 2 - Tokuyama-Meeting",
     fecha: "05 Febrero 2027",
     imagen: "/Programa/Dia2.jpg",
@@ -40,7 +40,6 @@ const programa = [
 
 export default function Programa() {
   const [activo, setActivo] = useState<number | null>(null);
-
   return (
     <section id="programa" className="relative py-32 px-6 overflow-hidden bg-white">
 
@@ -78,7 +77,7 @@ export default function Programa() {
 
         {/* CONTENIDO */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
-          
+
           {/* LISTA PROGRAMA */}
 
               <div className="lg:max-w-lg">
@@ -112,7 +111,7 @@ export default function Programa() {
                           isOpen
                             ? {
                                 backgroundImage:
-                                  "linear-gradient(120deg,  #f89b30, #ffffff, #e8d5b5, #ffffff, #d35cee6b, #f89b30ab, #ffffff, #e8d5b5)",
+                                  "linear-gradient(120deg,  #f89b30, #ffffff, #e8d5b5, #ffffff, #d35cee6b, #f89b30ab, #ffffff, #e8d5b5,)",
                                 backgroundSize: "300% 300%",
                               }
                             : undefined
@@ -140,7 +139,7 @@ export default function Programa() {
                             ▼
                           </motion.span>
                         </button>
-
+                        
                         <AnimatePresence>
                           {isOpen && (
                             <motion.div
@@ -197,7 +196,6 @@ export default function Programa() {
                   })}
                 </div>
               </div>
-
           {/* PANEL DE IMAGENES */}
          <div
               className="
@@ -227,7 +225,6 @@ export default function Programa() {
                 />
               </AnimatePresence>
             </div>
-
         </div>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -23,17 +23,6 @@ export const CONTACTOS = [
 
   {
     id: 3,
-    nombre: "DR. YOSHITAKA NIJITOMI",
-    puesto: "PONENTE",
-    bandera: "/banderas/japon.png",
-    descripcion:
-      "Cirujano dentista japonés egresado de la Universidad San Francisco con formación internacional, cuenta con una maestría en Prostodoncia- Implantes. Ha desempeñado cargos académicos como profesor asistente en materiales dentales y tiene experiencia clínica hospitalaria. Desde 2004 se ha consolidado como un asesor y conferencista internacional, impartiendo cursos y conferencias alrededor del mundo enfocados en odontología restauradora, técnicas con resinas compuestas y enfoques mínimamente invasivos.",
-    imagen: "/TIM Chihuahua/TIM - NIJITOMI.jpg",
-    imagenMobile: "/TIM Chihuahua/mobile/TIM - NIJITOMI.jpg",
-  },
-
-  {
-    id: 4,
     nombre: "DR. ANDRES CURRA",
     puesto: "PONENTE",
     bandera: "/banderas/venezuela.png",
@@ -42,15 +31,5 @@ export const CONTACTOS = [
     imagen: "/TIM Chihuahua/TIM - ANDRES.jpg",
     imagenMobile: "/TIM Chihuahua/mobile/TIM - ANDRES.jpg",
   },
-
-  {
-    id: 5,
-    nombre: "DRA. MONTSERRAT ZENDEJAS",
-    puesto: "PONENTE",
-    bandera: "/banderas/mexico.png",
-    descripcion:
-      "Cirujano dentista, especialista en Ortodoncia y Alta Estética Dental, con experiencia en restauraciones estéticas, estratificación de carillas de resina directa, diagnóstico digital y planificación de tratamientos de ortodoncia estética. Es fundadora y directora de Monteeth Clínica Dental, así como cofundadora y coordinadora nacional de Level Up Academy S.C., enfocada en educación continua para profesionales de la salud. Se desempeña también como conferencista e instructora nacional e internacional. Su formación se complementa con múltiples capacitaciones nacionales e internacionales en estética dental, resinas estratificadas, flujo digital, alineadores invisibles y odontología restauradora, además de participar en encuentros como Tokuyama Fest y Tokuyama International Meeting.",
-    imagen: "/TIM Chihuahua/TIM - MONTSERRAT.jpg",
-    imagenMobile: "/TIM Chihuahua/mobile/TIM - MONTSERRAT.jpg",
-  },
 ]
+

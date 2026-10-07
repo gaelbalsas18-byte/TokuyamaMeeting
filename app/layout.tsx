@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TOKUYAMA INTERNATIONAL MEETING",
+  title: "Tokuyama International Meeting",
   description: "Pagina de eventos tokuyama x Balsas Dental",
   icons: {
     icon: "Logos/Icon.png"
@@ -42,3 +42,4 @@ export default function RootLayout({
     </html>
   );
 }
+

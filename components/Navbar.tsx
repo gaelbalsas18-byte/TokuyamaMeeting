@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* LOGOS (MISMA ESTRUCTURA) */}
         <div className="flex items-center gap-2 md:translate-x-25 md:translate-y-[3px]">
             <Image
-              src="/Logos/Tokuyamat.png"
+              src="/Logos/TokuyamaB.png"
               alt="Tokuyama"
               width={180}
               height={120}
