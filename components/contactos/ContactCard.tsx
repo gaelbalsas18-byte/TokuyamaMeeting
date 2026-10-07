@@ -23,6 +23,17 @@ export const CONTACTOS = [
 
   {
     id: 3,
+    nombre: "DR. YOSHITAKA NIJITOMI",
+    puesto: "PONENTE",
+    bandera: "/banderas/japon.png",
+    descripcion:
+    "Cirujano dentista japonés egresado de la Universidad San Francisco con formación internacional, cuenta con una maestría en Prostodoncia- Implantes. Ha desempeñado cargos académicos como profesor asistente en materiales dentales y tiene experiencia clínica hospitalaria. Desde 2004 se ha consolidado como un asesor y conferencista internacional, impartiendo cursos y conferencias alrededor del mundo enfocados en odontología restauradora, técnicas con resinas compuestas y enfoques mínimamente invasivos. Actualmente se desempeña como especialista y conferencista en Tokuyama Dental, aportando su experiencia científica y clínica al desarrollo y aplicación de materiales de alta estética.",
+    imagen: "/TIM Chihuahua/TIM - NIJITOMI.jpg",
+    imagenMobile: "/TIM Chihuahua/mobile/TIM - ANDRES.jpg",
+  },
+
+  {
+    id: 4,
     nombre: "DR. ANDRES CURRA",
     puesto: "PONENTE",
     bandera: "/banderas/venezuela.png",
@@ -32,4 +43,3 @@ export const CONTACTOS = [
     imagenMobile: "/TIM Chihuahua/mobile/TIM - ANDRES.jpg",
   },
 ]
-

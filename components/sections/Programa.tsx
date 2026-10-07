@@ -111,7 +111,7 @@ export default function Programa() {
                           isOpen
                             ? {
                                 backgroundImage:
-                                  "linear-gradient(120deg,  #f89b30, #ffffff, #e8d5b5, #ffffff, #d35cee6b, #f89b30ab, #ffffff, #e8d5b5,)",
+                                  "linear-gradient(120deg,  #f89b30, #ffffff, #e8d5b5, #ffffff, #d35cee6b, #f89b30ab, #ffffff, #e8d5b5)",
                                 backgroundSize: "300% 300%",
                               }
                             : undefined
@@ -139,7 +139,7 @@ export default function Programa() {
                             ▼
                           </motion.span>
                         </button>
-                        
+
                         <AnimatePresence>
                           {isOpen && (
                             <motion.div
@@ -196,8 +196,10 @@ export default function Programa() {
                   })}
                 </div>
               </div>
+
           {/* PANEL DE IMAGENES */}
-         <div
+
+            <div
               className="
                 relative 
                 w-[90vw] 
@@ -225,14 +227,15 @@ export default function Programa() {
                 />
               </AnimatePresence>
             </div>
+
         </div>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-15 max-w-6xl md:text-base text-center text-black mx-auto text-base"
-        >
-        Vive una experiencia educativa única que te permitirá llevar tu práctica al siguiente nivel, descubriendo nuevas técnicas, materiales de última generación y soluciones innovadoras que están transformando el futuro de la odontología a nivel mundial.
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-15 max-w-6xl md:text-base text-center text-black mx-auto text-base"
+          >
+              Vive una experiencia educativa única que te permitirá llevar tu práctica al siguiente nivel, descubriendo nuevas técnicas, materiales de última generación y soluciones innovadoras que están transformando el futuro de la odontología a nivel mundial.
         </motion.h2>
       </div>
     </section>
