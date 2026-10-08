@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   const [parrafoActivo, setParrafoActivo] = useState(0);
+
   const parrafos = [
     `Tokuyama International Meeting es un encuentro odontológico
     concebido como un puente entre México y el conocimiento global.
@@ -25,10 +26,11 @@ export default function Hero() {
     odontología.`,
   ];
 
-  {/* =========================
-      CAMBIO AUTOMÁTICO
-  ========================== */}
-
+  /*
+   * =========================
+   * CAMBIO AUTOMÁTICO
+   * =========================
+   */
   useEffect(() => {
     const intervalo = setInterval(() => {
       setParrafoActivo((prev) => (prev + 1) % parrafos.length);
@@ -45,19 +47,18 @@ export default function Hero() {
         flex
         items-center
         overflow-hidden
-        py-20
+        py-10
+        sm:py-14
         md:py-20
       "
     >
-
       {/* =========================
           IMAGEN DE FONDO
       ========================== */}
 
       <div className="absolute inset-0">
-
         <Image
-          src="/TIM Chihuahua/TIM.jpg"
+          src="/TIM Chihuahua/Pie.jpg"
           alt=""
           fill
           priority
@@ -83,65 +84,32 @@ export default function Hero() {
           w-full
         "
       >
-
-        <div
-          className="
-            grid
-            grid-cols-1
-            gap-8
-            md:gap-16
-            items-center
-          "
-        >
+        <div className="flex flex-col items-center w-full">
 
           {/* =========================
-              ELEMENTO SUPERIOR
+              LOGO
           ========================== */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -80,
-              scale: 1.1,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              scale: 1,
-              y: [0, -15, 0],
-            }}
-            transition={{
-              opacity: {
-                duration: 1,
-              },
-
-              x: {
-                duration: 1,
-              },
-
-              scale: {
-                duration: 1.5,
-              },
-
-              y: {
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
-            }}
-            className="
-              relative
-              mx-auto
-              w-[90%]
-              sm:w-[75%]
-              md:w-full
-              max-w-[650px]
-            "
-          >
-          </motion.div>
+          <div className="w-full flex justify-center px-4">
+            <Image
+              src="/Logos/TIM.png"
+              alt="Tokuyama International Meeting"
+              width={480}
+              height={220}
+              priority
+              className="
+                w-full
+                max-w-[340px]
+                sm:max-w-[400px]
+                md:max-w-[460px]
+                lg:max-w-[480px]
+                h-auto
+              "
+            />
+          </div>
 
           {/* =========================
-              CONTENEDOR DEL CARRUSEL
+              CONTENEDOR DEL TEXTO
           ========================== */}
 
           <div
@@ -149,17 +117,15 @@ export default function Hero() {
               relative
               text-white
               text-center
-
               max-w-3xl
               mx-auto
               w-full
 
-              mt-40
-              sm:mt-32
-              md:mt-50
+              mt-4
+              sm:mt-5
+              md:mt-7
 
               pb-8
-              md:pb-0
             "
           >
 
@@ -171,16 +137,15 @@ export default function Hero() {
               className="
                 relative
 
-                h-[250px]
-                sm:h-[220px]
-                md:h-[170px]
+                min-h-[200px]
+                sm:min-h-[180px]
+                md:min-h-[160px]
 
                 flex
                 items-center
                 justify-center
               "
             >
-
               <AnimatePresence mode="wait">
 
                 <motion.p
@@ -224,9 +189,7 @@ export default function Hero() {
                 </motion.p>
 
               </AnimatePresence>
-
             </div>
-
 
             {/* =========================
                 INDICADORES
@@ -241,7 +204,6 @@ export default function Hero() {
                 mt-2
               "
             >
-
               {parrafos.map((_, index) => (
                 <button
                   key={index}
@@ -261,16 +223,14 @@ export default function Hero() {
                   `}
                 />
               ))}
-
             </div>
-
 
             {/* =========================
                 BOTÓN
             ========================== */}
 
             <motion.a
-              href="https://wa.me/525564143107?text=Hola%20quiero%20información%20sobre%20las%20entradas%20al%20Tokuyama%20International Meeting"
+              href="https://wa.me/525564143107?text=Hola%20quiero%20información%20sobre%20las%20entradas%20al%20Tokuyama%20International%20Meeting"
               target="_blank"
               rel="noopener noreferrer"
               initial={{
@@ -288,9 +248,9 @@ export default function Hero() {
               className="
                 inline-block
 
-                mt-6
-                sm:mt-7
-                md:mt-8
+                mt-5
+                sm:mt-6
+                md:mt-7
 
                 px-6
                 sm:px-8
@@ -319,11 +279,8 @@ export default function Hero() {
             </motion.a>
 
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

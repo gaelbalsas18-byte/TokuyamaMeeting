@@ -12,12 +12,12 @@ const programa = [
     actividades: [
       { hora: "08:00 - 09:00", titulo: "Registro" },
       { hora: "09:00 - 10:00", titulo: "Conferencia - Dr. Yoshitaka Nijitomi" },
-      { hora: "10:00 - 11:00", titulo: "Conferencia - Dr. Andres Curra"},
+      { hora: "10:00 - 11:00", titulo: "Conferencia - Dr. Andres Curra - Posteriores: claves para restauraciones directas y predictivas"},
       { hora: "11:00 - 11:30", titulo: "Coffee - Break" },
-      { hora: "11:30 - 12:30", titulo: "Conferencia - Dra. Montserrat Zendejas" },
-      { hora: "12:30 - 13:00", titulo: "Coffee - Break" },
-      { hora: "13:00 - 14:00", titulo: "Conferencia - Dr. Johan Figueira"},
-      { hora: "14:00 - 16:00", titulo: "Comida" },
+      { hora: "11:30 - 12:30", titulo: "Conferencia - Dr. RAFAEL PLASCENCIA - Resina de inyección multilayer con caracterización estética interna " },
+      { hora: "12:30 - 14:30", titulo: "Coffee - Break" },
+      { hora: "14:30 - 15:30", titulo: "Conferencia - Dr. Johan Figueira - Rehabilitaciones completas con cerámica: desde el prototipo de larga durabilidad hasta la sonrisa final"},
+      { hora: "15:30 - 16:00", titulo: "Coffee - Break" },
       { hora: "16:00 - 17:30", titulo: "Conferencia - Dr. Thiago Ottoboni" },
     ],
   },
@@ -25,15 +25,16 @@ const programa = [
   {
     dia: "Día 2 - Tokuyama-Meeting",
     fecha: "05 Febrero 2027",
-    imagen: "/Programa/Dia2.jpg",
+    imagen: "/Programa/Dia3.jpg",
     actividades: [
       { hora: "08:00 - 09:00", titulo: "Registro" },
       { hora: "09:00 - 11:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
       { hora: "11:00 - 11:30", titulo: "Coffee - Break" },
-      { hora: "11:30 - 13:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
-      { hora: "13:00 - 15:00", titulo: "Comida" },
-      { hora: "15:00 - 18:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
-      { hora: "18:00 - 18:30", titulo: "Clausura" },
+      { hora: "11:30 - 14:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
+      { hora: "14:00 - 15:00", titulo: "Comida" },
+      { hora: "15:00 - 17:00", titulo: "Hands On - Dr. Thiago Ottoboni “Práctica de carillas estratificadas" },
+      { hora: "17:00 - 18:30", titulo: "Deliberación" },
+      { hora: "18:30 - 19:00", titulo: "Clausura" },
     ],
   },
 ];
@@ -76,6 +77,7 @@ export default function Programa() {
         </motion.h2>
 
         {/* CONTENIDO */}
+
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
 
           {/* LISTA PROGRAMA */}
@@ -141,6 +143,7 @@ export default function Programa() {
                         </button>
 
                         <AnimatePresence>
+
                           {isOpen && (
                             <motion.div
                               initial={{ height: 0, opacity: 0 }}
@@ -179,7 +182,7 @@ export default function Programa() {
                                   </a>
 
                                   <a
-                                    href="#"
+                                    href="/BASES_TIM.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
@@ -225,7 +228,9 @@ export default function Programa() {
                   transition={{ duration: 0.6 }}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
+
               </AnimatePresence>
+              
             </div>
 
         </div>

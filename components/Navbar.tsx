@@ -55,11 +55,11 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
 
         {/* LOGOS (MISMA ESTRUCTURA) */}
-        <div className="flex items-center gap-2 md:translate-x-25 md:translate-y-[3px]">
+        <div className="flex items-center gap-2 md:translate-x-30 md:translate-y-[3px]">
             <Image
               src="/Logos/TokuyamaB.png"
               alt="Tokuyama"
-              width={180}
+              width={150}
               height={120}
               priority
             />
@@ -68,11 +68,22 @@ export default function Navbar() {
               <Image
                 src="/Logos/Blanco.png"
                 alt="Logo Balsas"
-                width={90}
+                width={70}
                 height={45}
                 priority
               />
             </div>
+
+            <div className="translate-y-[1px] md:translate-x-165">
+              <Image
+                src="/Logos/Dentalid.png"
+                alt="Logo Dentalid"
+                width={70}
+                height={30}
+                priority
+              />
+            </div>
+
           </div>
 
         {/* MENU DESKTOP (IGUAL) */}

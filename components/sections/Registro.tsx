@@ -108,7 +108,8 @@ export default function Registro() {
   };
 
   return (
-   <section id="registro" className="relative py-32 px-6 overflow-hidden">
+    
+   <section id="registro" className="relative py-10 sm:py-14 md:py-1 px-6 overflow-hidden">
 
       {/* Background */}
         <div className="absolute inset-0 -z-10">
@@ -122,7 +123,24 @@ export default function Registro() {
           {/*<div className="absolute inset-0 bg-white/75" /> */}
         </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="flex w-full justify-center px-4 mb-6 sm:mb-8">
+          <Image
+            src="/Logos/Logos.png"
+            alt="Logos"
+            width={480}
+            height={220}
+            priority
+            className="
+              w-full
+              max-w-[480px]
+              sm:max-w-[400px]
+              md:max-w-[720px]
+              h-auto
+            "
+          />
+        </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
         
         {/* COLUMNA IZQUIERDA */}
 

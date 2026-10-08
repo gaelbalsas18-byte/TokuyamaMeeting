@@ -211,15 +211,18 @@ export default function ContactosSection() {
         </h3>
 
         {/* ===== BANDERA ===== */}
-        <div className="flex justify-center items-center mb-3">
+      <div className="flex justify-center items-center gap-2 mb-3">
+        {contactoActivo.banderas.map((bandera, i) => (
           <Image
-            src={contactoActivo.bandera}
-            alt={`Bandera de ${contactoActivo.puesto}`}
+            key={i}
+            src={bandera}
+            alt="Bandera"
             width={28}
             height={23}
             className="w-7 h-[18px] object-cover rounded-sm shadow-sm"
           />
-        </div>
+        ))}
+      </div>
 
         {/* ===== PUESTO ===== */}
         <p
