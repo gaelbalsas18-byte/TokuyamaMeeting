@@ -48,7 +48,7 @@ export const CONTACTOS = [
 
   {
     id: 5,
-    nombre: "DR. ANDRES CURRA",
+    nombre: "DR. ANDRÉS CURRA",
     puesto: "PONENTE",
     banderas:["/banderas/venezuela.png",
              "/banderas/mexico.png",
