@@ -14,7 +14,7 @@ const programa = [
       { hora: "09:00 - 10:00", titulo: "Conferencia - Dr. Yoshitaka Nijitomi" },
       { hora: "10:00 - 11:00", titulo: "Conferencia - Dr. Andres Curra - Posteriores: claves para restauraciones directas y predictivas"},
       { hora: "11:00 - 11:30", titulo: "Coffee - Break" },
-      { hora: "11:30 - 12:30", titulo: "Conferencia - Dr. RAFAEL PLASCENCIA - Resina de inyección multilayer con caracterización estética interna " },
+      { hora: "11:30 - 12:30", titulo: "Conferencia - Dr. Rafael Plascencia - Resina de inyección multilayer con caracterización estética interna " },
       { hora: "12:30 - 14:30", titulo: "Coffee - Break" },
       { hora: "14:30 - 15:30", titulo: "Conferencia - Dr. Johan Figueira - Rehabilitaciones completas con cerámica: desde el prototipo de larga durabilidad hasta la sonrisa final"},
       { hora: "15:30 - 16:00", titulo: "Coffee - Break" },

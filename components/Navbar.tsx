@@ -78,7 +78,7 @@ export default function Navbar() {
               <Image
                 src="/Logos/Dentalid.png"
                 alt="Logo Dentalid"
-                width={70}
+                width={85}
                 height={30}
                 priority
               />
