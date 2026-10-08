@@ -109,10 +109,13 @@ export default function Registro() {
 
   return (
     
-   <section id="registro" className="relative py-10 sm:py-14 md:py-1 px-6 overflow-hidden">
+ <section
+  id="registro"
+  className="relative pt-0 pb-10 sm:pt-2 sm:pb-14 md:pt-2 md:pb-10 px-6 overflow-hidden"
+>
 
       {/* Background */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-5">
           <Image
             src="/TIM Chihuahua/Pie.jpg"
             alt=""
@@ -123,7 +126,7 @@ export default function Registro() {
           {/*<div className="absolute inset-0 bg-white/75" /> */}
         </div>
 
-      <div className="flex w-full justify-center px-4 mb-6 sm:mb-8">
+       <div className="flex w-full justify-center px-4 -mt-10 sm:-mt-24 mb-1 sm:mb-2">
           <Image
             src="/Logos/Logos.png"
             alt="Logos"
@@ -140,7 +143,7 @@ export default function Registro() {
           />
         </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+    <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
         
         {/* COLUMNA IZQUIERDA */}
 
@@ -330,11 +333,11 @@ export default function Registro() {
                   )}
 
               {(form.boleto === "Hands On" || form.boleto === "Beca") && (
-                <label className="flex gap-2 text-sm text-black">
+                <label className="flex gap-2 text-sm text-white">
                   <input type="checkbox" required
                     onChange={(e) => setForm({ ...form, bases: e.target.checked })} />
                   Acepto las{" "}
-                  <a href="#" className="underline hover:text-green-400">
+                  <a href="#" className="underline hover:text-purple-700">
                     Bases del evento
                   </a>
                 </label>
