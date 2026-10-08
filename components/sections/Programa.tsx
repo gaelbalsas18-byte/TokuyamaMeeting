@@ -12,7 +12,7 @@ const programa = [
     actividades: [
       { hora: "08:00 - 09:00", titulo: "Registro" },
       { hora: "09:00 - 10:00", titulo: "Conferencia - Dr. Yoshitaka Nijitomi" },
-      { hora: "10:00 - 11:00", titulo: "Conferencia - Dr. Andres Curra - Posteriores: claves para restauraciones directas y predictivas"},
+      { hora: "10:00 - 11:00", titulo: "Conferencia - Dr. Andrés Curra - Posteriores: claves para restauraciones directas y predictivas"},
       { hora: "11:00 - 11:30", titulo: "Coffee - Break" },
       { hora: "11:30 - 12:30", titulo: "Conferencia - Dr. Rafael Plascencia - Resina de inyección multilayer con caracterización estética interna " },
       { hora: "12:30 - 14:30", titulo: "Coffee - Break" },

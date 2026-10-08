@@ -17,7 +17,7 @@ export const CONTACTOS = [
     puesto: "PONENTE",
     banderas: ["/banderas/japon.png"],
     descripcion:
-    "Cirujano dentista japonés egresado de la Universidad San Francisco con formación internacional, cuenta con una maestría en Prostodoncia- Implantes. Ha desempeñado cargos académicos como profesor asistente en materiales dentales y tiene experiencia clínica hospitalaria. Desde 2004 se ha consolidado como un asesor y conferencista internacional, impartiendo cursos y conferencias alrededor del mundo enfocados en odontología restauradora, técnicas con resinas compuestas y enfoques mínimamente invasivos. Actualmente se desempeña como especialista y conferencista en Tokuyama Dental, aportando su experiencia científica y clínica al desarrollo y aplicación de materiales de alta estética.",
+    "Cirujano dentista japonés egresado de la Universidad San Francisco con formación internacional, cuenta con una maestría en Prostodoncia- Implantes. Ha desempeñado cargos académicos como profesor, asistente en materiales dentales y tiene experiencia clínica hospitalaria. Desde 2004, se ha consolidado como un asesor y conferencista internacional, impartiendo cursos y conferencias alrededor del mundo enfocados en odontología restauradora, técnicas con resinas compuestas y enfoques mínimamente invasivos. Actualmente se desempeña como especialista y conferencista en Tokuyama Dental, aportando su experiencia científica y clínica al desarrollo y aplicación de materiales de alta estética.",
     imagen: "/TIM Chihuahua/TIM - NIJITOMI.jpg",
     imagenMobile: "/TIM Chihuahua/TIM - NIJITOMIM.jpg",
   },
@@ -54,7 +54,7 @@ export const CONTACTOS = [
              "/banderas/mexico.png",
             ],
     descripcion:
-      "Cirujano dentista egresado de la Universidad Autónoma de Chihuahua y especialista en Prostodoncia por la Universidad de Buenos Aires. Su práctica profesional se enfoca en la rehabilitación oral y el diseño dental digital, desempeñándose como rehabilitador oral en Estudio Dental Curra y como diseñador dental digital. CV ANDRES CURRA CV ANDRES CURRA. Cuenta con formación en rehabilitación oral adhesiva, restauraciones directas, fotografía dental, encerado anatómico y planificación digital, incluyendo capacitación avanzada en Exocad y Exoplan. Además, imparte cursos con enfoque en rehabilitación oral, integrando herramientas digitales y conocimientos clínicos en su práctica profesional.",
+      "Cirujano dentista egresado de la Universidad Autónoma de Chihuahua y especialista en Prostodoncia por la Universidad de Buenos Aires. Su práctica profesional se enfoca en la rehabilitación oral y el diseño dental digital, desempeñándose como rehabilitador oral en Estudio Dental Curra y como diseñador dental digital. CV ANDRÉS CURRA. Cuenta con formación en rehabilitación oral adhesiva, restauraciones directas, fotografía dental, encerado anatómico y planificación digital, incluyendo capacitación avanzada en Exocad y Exoplan. Además, imparte cursos con enfoque en rehabilitación oral, integrando herramientas digitales y conocimientos clínicos en su práctica profesional.",
     imagen: "/TIM Chihuahua/TIM - ANDRES.jpg",
     imagenMobile: "/TIM Chihuahua/TIM - ANDRESM.jpg",
   },
