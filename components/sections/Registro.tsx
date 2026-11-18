@@ -17,6 +17,7 @@ export default function Registro() {
     telefono: "",
     cedula: "",
     especialidad: "",
+    curriculum: "",
     alergias: "",
     estado: "",
     instagram: "",
@@ -217,6 +218,9 @@ export default function Registro() {
               <input placeholder="Especialidad" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, especialidad: e.target.value })} />
 
+              <input placeholder="Curriculum" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
+                onChange={(e) => setForm({ ...form, curriculum: e.target.value })} />
+
               <input required placeholder="¿Alguna alergia?" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, alergias: e.target.value })} />
 
@@ -235,7 +239,7 @@ export default function Registro() {
                         {estado}
                       </option>
                     ))}
-                  </select>
+              </select>
 
               <input placeholder="Instagram (Opcional)" className="w-full border border-orange-400 px-4 py-3 rounded-lg bg-white text-black"
                 onChange={(e) => setForm({ ...form, instagram: e.target.value })} />

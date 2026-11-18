@@ -170,7 +170,7 @@ export default function Programa() {
                               </ul>
 
                               {/* BOTONES SOLO DÍA 2 Y 3 */}
-                              {index > 0 && (
+                             {/* {index > 0 && (
                                 <div className="mt-6 flex gap-4">
                                   <a
                                     href="#"
@@ -182,7 +182,7 @@ export default function Programa() {
                                   </a>
 
                                   <a
-                                    href="/BASES_TIM.pdf"
+                                    href="#"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-6 py-2 border border-[#9333c2] text-black text-sm uppercase tracking-wide rounded-lg hover:bg-white hover:text-black transition-all"
@@ -190,7 +190,7 @@ export default function Programa() {
                                     Bases
                                   </a>
                                 </div>
-                              )}
+                              )}*/}
                             </motion.div>
                           )}
                         </AnimatePresence>
