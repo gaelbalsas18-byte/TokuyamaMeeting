@@ -7,7 +7,7 @@ import Image from "next/image";
 const programa = [
   {
     dia: "Día 1 - Tokuyama-Meeting",
-    fecha: "04 Febrero 2027",
+    fecha: "22 Febrero 2027",
     imagen: "/Programa/Dia1.jpg",
     actividades: [
       { hora: "08:00 - 09:00", titulo: "Registro" },
@@ -24,7 +24,7 @@ const programa = [
 
   {
     dia: "Día 2 - Tokuyama-Meeting",
-    fecha: "05 Febrero 2027",
+    fecha: "23 Febrero 2027",
     imagen: "/Programa/Dia3.jpg",
     actividades: [
       { hora: "08:00 - 09:00", titulo: "Registro" },

@@ -3,7 +3,6 @@ export const CONTACTOS = [
   {
     id: 1,
     nombre: "DR. THIAGO OTTOBONI",
-    puesto: "PONENTE",
     banderas: ["/banderas/brasil.png"],
     descripcion:
       "Cirujano dentista especializado en Prostodoncia y Odontología Restauradora, con amplia experiencia en odontología estética, restauraciones directas con resina compuesta y flujos de trabajo digitales. Es coordinador de un programa de especialización de posgrado en Brasil y conferencista internacional. Actualmente es vicepresidente de la Sociedad Brasileña de Odontología Estética (SBOE), miembro del equipo de Key Opinion Leaders de Smilecloud y Silver Member de StyleItaliano. En su práctica clínica integra la filosofía Slow Dentistry con tecnologías como escaneo intraoral, encerados y guías impresas en 3D. Además, es autor y coautor de artículos científicos y capítulos de libros. Su enfoque combina la odontología restauradora estética con la planificación digital y técnicas de estratificación guiada en 3D para obtener resultados estéticos predecibles.",
@@ -14,7 +13,6 @@ export const CONTACTOS = [
   {
     id: 2,
     nombre: "DR. YOSHITAKA NIJITOMI",
-    puesto: "PONENTE",
     banderas: ["/banderas/japon.png"],
     descripcion:
     "Cirujano dentista japonés egresado de la Universidad San Francisco con formación internacional, cuenta con una maestría en Prostodoncia- Implantes. Ha desempeñado cargos académicos como profesor, asistente en materiales dentales y tiene experiencia clínica hospitalaria. Desde 2004, se ha consolidado como un asesor y conferencista internacional, impartiendo cursos y conferencias alrededor del mundo enfocados en odontología restauradora, técnicas con resinas compuestas y enfoques mínimamente invasivos. Actualmente se desempeña como especialista y conferencista en Tokuyama Dental, aportando su experiencia científica y clínica al desarrollo y aplicación de materiales de alta estética.",
@@ -25,7 +23,6 @@ export const CONTACTOS = [
   {
     id: 3,
     nombre: "DR. JOHAN FIGUEIRA",
-    puesto: "PONENTE",
     banderas:[ "/banderas/venezuela.png",
              "/banderas/us.png",
             ],
@@ -38,7 +35,6 @@ export const CONTACTOS = [
   {
     id: 4,
     nombre: "DR. RAFAEL PLASCENCIA",
-    puesto: "PONENTE",
     banderas: ["/banderas/mexico.png"],
     descripcion:
     "Cirujano dentista especialista en Rehabilitación Oral, con formación avanzada en estética, periodoncia e implantología. Cuenta con una Especialidad en Rehabilitación Oral, un Máster en Cerámicas Estéticas realizado en Brasil, un Máster en Periodoncia e Implantología en São Paulo y formación en Periodoncia y Regeneración Ósea en la Universidad de Nueva York (NYU). Es conferencista nacional e internacional, profesor de posgrado y fundador del grupo de estudios Odontología a Conciencia. Además, ha participado como ponente en importantes encuentros y organizaciones como ITI, AMIC Dental y ARIC, acumulando más de 200 cursos impartidos y múltiples conferencias en el ámbito de la odontología moderna.",
@@ -49,7 +45,6 @@ export const CONTACTOS = [
   {
     id: 5,
     nombre: "DR. ANDRÉS CURRA",
-    puesto: "PONENTE",
     banderas:["/banderas/venezuela.png",
              "/banderas/mexico.png",
             ],
