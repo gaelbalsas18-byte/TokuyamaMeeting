@@ -224,21 +224,6 @@ export default function ContactosSection() {
         ))}
       </div>
 
-        {/* ===== PUESTO ===== */}
-        <p
-          className="
-            text-sm
-            uppercase
-            tracking-widest
-            text-neutral-500
-            md:text-white/80
-            text-center
-            mb-3
-          "
-        >
-          {contactoActivo.puesto}
-        </p>
-
 
         {/* ===== DESCRIPCIÓN ===== */}
 
